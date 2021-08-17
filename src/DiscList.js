@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getDiscs } from './fetch-utils';
-
+import './DiscList.css'
 class DiscList extends Component {
     state = { discs: [] };
     componentDidMount = async () => {

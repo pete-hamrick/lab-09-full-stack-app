@@ -4,11 +4,12 @@ import CreateDisc from './CreateDisc';
 import DiscDetail from './DiscDetail';
 import DiscList from './DiscList';
 import Header from './Header';
+import './App.css'
 class App extends Component {
   state = {  }
   render() { 
     return ( 
-      <>
+      <section>
         <BrowserRouter>
           <Header />
             <Switch>
@@ -17,7 +18,7 @@ class App extends Component {
               <Route exact path ='/create' component={CreateDisc} />
             </Switch>
         </BrowserRouter>
-      </>
+      </section>
     );
   }
 }
