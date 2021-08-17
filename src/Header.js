@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-
+import { NavLink } from 'react-router-dom';
+import './Header.css';
 class Header extends Component {
     state = {  }
     render() { 
         return ( 
             <header>
-                <h1>HEADER</h1>
+                <NavLink exact to='/'>Home</NavLink>
+                <NavLink to='/create'>Add New Disc</NavLink>
             </header>
         );
     }

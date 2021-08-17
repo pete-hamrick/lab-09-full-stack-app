@@ -1,0 +1,20 @@
+header {
+    width: 100vw;
+    height: 50px;
+    background-color: #A4B0F5;
+    display: flex;
+    justify-content: flex-end;
+
+}
+a.visited {
+    text-decoration: none;
+}
+a.active {
+    text-decoration: none;
+    color: #545E75;
+}
+
+a {
+    margin: 10px;
+    color: #7D4600;
+}
