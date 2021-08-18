@@ -3,13 +3,14 @@ import { getManufacturers } from './fetch-utils';
 import './CreateDisc.css';
 class CreateDisc extends Component {
     state = { 
-        id: 0,
         disc: '',
         speed: 0,
         type: '',
-        stable: null,
-        plastics: '',
-        manufacturers: []
+        stable: true,
+        manufacturer: 'Innova',
+        manufacturers: [],
+        message: '',
+        error: false,
     };
     componentDidMount = async () => {
         const manufacturers = await getManufacturers();
@@ -62,7 +63,7 @@ class CreateDisc extends Component {
                         <select>
                             {this.state.manufacturers.map((mn) => {
                                 return (
-                                    <option value={mn.name}>{mn.name}</option>
+                                    <option key={mn.name} value={mn.name}>{mn.name}</option>
                                 )
                             })}
                         </select>
