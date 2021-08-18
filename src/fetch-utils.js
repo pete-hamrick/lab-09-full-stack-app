@@ -34,6 +34,15 @@ export const updateDisc = async (discObj) => {
     return data;
 }
 
-export const createDisc = async () => {
+export const createDisc = async (discObj) => {
+    const resp = await fetch(`${URL}/discs`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(discObj),
+    });
+    const data = await resp.json();
+    return data;
 
 }
