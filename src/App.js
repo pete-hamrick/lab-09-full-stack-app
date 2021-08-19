@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import CreateDisc from './CreateDisc';
+import DiscDetail from './DiscDetail';
+import DiscList from './DiscList';
+import Header from './Header';
+import './App.css'
+class App extends Component {
+  state = {  }
+  render() { 
+    return ( 
+      <section>
+        <BrowserRouter>
+          <Header />
+            <Switch>
+              <Route exact path ='/' component={DiscList} />
+              <Route exact path ='/discs/:id' component={DiscDetail} />
+              <Route exact path ='/create' component={CreateDisc} />
+            </Switch>
+        </BrowserRouter>
+      </section>
+    );
+  }
 }
-
+ 
 export default App;
