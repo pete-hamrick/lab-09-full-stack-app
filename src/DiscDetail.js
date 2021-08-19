@@ -22,14 +22,14 @@ class DiscDetail extends Component {
         const manufacturers = await getManufacturers();
         this.setState({ ...discData, manufacturers});
     };
-    //TODO
+
     getManufacturerId = () => {
         const manufacturersObj = this.state.manufacturers.find(
             (mn) => mn.name === this.state.manufacturer
         );
         return manufacturersObj.id;
     }
-    //TODO
+
     handleUpdateDisc = async (e) => {
         e.preventDefault();
         const discData = {
